@@ -1,0 +1,21 @@
+#---心電感應---
+
+#設定正確答案
+ans=1076
+
+#使用者輸入
+guess = int( input() )
+
+
+# 判斷結構
+# 不等於  !=
+# 等於    ==
+
+if guess < 1000 and guess > 9999 :
+  print("Wrong input !!!!!!!")
+  
+elif guess == ans :
+  print("Bingo!")
+
+else :
+  print("Oh no!")
