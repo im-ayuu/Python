@@ -1,0 +1,60 @@
+#---心電感應---
+
+#設定正確答案
+import random
+ans = random.randint(1,100)
+
+#使用者輸入
+guess = int( input() )
+
+#設定計數器
+counter=1
+
+##-- 重複結構：猜對為止
+while guess != ans :
+  print('oh no')
+
+  if guess<ans :
+    print('猜大一點')
+  else :
+    print('猜小一點')
+  
+  guess = int(input())
+  counter = counter + 1
+  
+print('ya','共猜了',counter,'次')
+
+
+
+
+
+
+""" #Two players PK
+
+import random  # 載入 random 模組以生成隨機數字
+
+# 生成 1 到 100 的隨機整數作為答案
+answer = random.randint(1, 100)
+print("雙人猜數字遊戲開始！正確答案是 1 到 100 之間的整數。")
+
+# 初始化變數
+player_turn = 1  # 紀錄目前是哪一位玩家的回合
+guessed_correctly = False  # 判斷遊戲是否結束的標記
+
+# 迴圈：持續進行猜數字，直到有人猜中為止
+while not guessed_correctly:
+    # 提示玩家輸入數字，並將輸入轉換為整數
+    guess = int(input(f"玩家 {player_turn}，請猜一個數字： "))
+
+    # 檢查玩家猜的數字是否與正確答案相同
+    if guess == answer:
+        print(f"恭喜玩家 {player_turn} 猜中了！正確答案是 {answer}！")
+        guessed_correctly = True  # 設定遊戲結束的標記
+    elif guess < answer:  # 如果猜的數字小於答案
+        print("猜得太低了！")
+    else:  # 如果猜的數字大於答案
+        print("猜得太高了！")
+
+    # 切換玩家：如果目前是玩家 1，則切換到玩家 2，反之亦然
+    player_turn = 1 if player_turn == 2 else 2
+"""
